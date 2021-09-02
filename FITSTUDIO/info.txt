@@ -1,0 +1,11 @@
+Bitrix
+login // admin
+pass // afonjke123
+
+Host
+
+Имя аккаунта (пользователя): yktfits
+Пароль аккаунта: Y7GNVA74
+
+Вход в Панель Управления Аккаунтом (ПУА): https://cp.timeweb.ru
+Имя и IP адрес сервера: bone016.timeweb.ru, 92.53.96.12 (используются для работы через FTP, SSH).

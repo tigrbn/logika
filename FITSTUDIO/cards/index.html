@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru" >
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body style="background:black;">
+  <section class="cards_filter" style="background-color: black;">
+    <div class="flex-column">
+      <div id="myBtnContainer">
+      <a class="nav-link" href="#"><button  class="btn btn-outline-success" onclick="filterSelection('all')" > Показать все</button></a>
+      <a class="nav-link" href="#"> <button class="btn btn-outline-success" onclick="filterSelection('one')"> Разовое </button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('litestart')"> Легкий старт</button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('student')"> Студент</button></a>
+      <a class="nav-link" href="#"> <button class="btn btn-outline-success" onclick="filterSelection('utro')"> Утро</button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('den')"> День</button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('dnevnoy')"> Дневной старт</button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('bezlimit')"> Безлимит</button></a>
+      <a class="nav-link" href="#">  <button class="btn btn-outline-success" onclick="filterSelection('weekends')"> Выходные дни</button></a>
+    </div>
+    </div>
+  
+    <div class="filter"  scroll="yes"> 
+      <div class="container"> 
+          <!-- РАЗОВОЕ НАЧАЛО -->
+          <a class="filterDiv one">
+            <li>
+              <div class="details">
+                <div class="cart_text">
+                  <p >РАЗОВОЕ ПОСЕЩЕНИЕ</p>
+                  <p>Будни: 07:00-23:00</p>
+                </div>
+                <img src="orange.png"style="width: 100%; height=100%">
+                <div class="descr">
+                  Какой-то текст который должен быть в блоке<br>
+                  </div>
+              </div>
+              </li>
+          </a>
+    
+      <!-- РАЗОВОЕ КОНЕЦ -->
+        <!-- ЛЕГКИЙ СТАРТ -->
+       <a class="filterDiv litestart">
+        <li>
+          <div class="details">
+            <img src="green.png"style="width: 100%; height=100%">
+            <div class="descr">
+              Какой-то текст который должен быть в блоке<br>
+              </div>
+          </div>
+        </li>
+       </a> 
+        <!-- ЛЕГКИЙ КОНЕЦ -->
+        <!-- СТУДЕНТ -->
+        <a class="filterDiv student">
+          <li>
+            <div class="details">
+              <img src="blue.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a>  
+         <!-- СТУДЕНТ КОНЕЦ -->
+       <!-- УТРО НАЧАЛО -->
+         <a class="filterDiv utro">
+          <li>
+            <div class="details">
+              <img src="green.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a>  
+        <a class="filterDiv utro">
+          <li>
+            <div class="details">
+              <img src="green.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a>  
+
+        <a class="filterDiv utro">
+          <li>
+            <div class="details">
+              <img src="green.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a>  
+        <a class="filterDiv utro">
+          <li>
+            <div class="details">
+              <img src="green.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a>  
+        <!-- УТРО КОНЕЦ -->
+
+        <!-- ДЕНЬ НАЧАЛО -->
+        <a class="filterDiv den">
+          <li>
+            <div class="details">
+              <img src="orange.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a> 
+        <a class="filterDiv den">
+          <li>
+            <div class="details">
+              <img src="orange.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a> 
+        <a class="filterDiv den">
+          <li>
+            <div class="details">
+              <img src="orange.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a> 
+        <a class="filterDiv den">
+          <li>
+            <div class="details">
+              <img src="orange.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+        </a> 
+        <!-- ДЕНЬ КОНЕЦ -->
+        <a class="filterDiv utro">
+          <!-- ДНЕВНОЙ СТАРТ НАЧАЛО -->
+          <a class="filterDiv dnevnoy">
+            <li>
+              <div class="details">
+                <div class="cart_text"> 
+                 <h2>ДНЕВНОЙ СТАРТ 1</h2>
+                </div>
+                <img src="blue.png"style="width: 100%; height=100%">
+              </div>
+            </li>
+          </a>
+
+      <a class="filterDiv dnevnoy">
+        <li>
+          <div class="details">
+            <img src="blue.png"style="width: 100%; height=100%">
+          </div>
+        </li>
+      </a>
+      <a class="filterDiv dnevnoy">
+        <li>
+          <div class="details">
+            <img src="blue.png"style="width: 100%; height=100%">
+          </div>
+        </li>
+      </a>
+
+  <a class="filterDiv dnevnoy">
+    <li>
+      <div class="details">
+        <img src="blue.png"style="width: 100%; height=100%">
+      </div>
+    </li>
+  </a>
+      <!-- ДНЕВНОЙ СТАРТ КОНЕЦ -->
+
+        <!-- БЕЗЛИМИТ НАЧАЛО -->
+        <a class="filterDiv bezlimit">
+              <li>
+                <div class="details">
+                  <img src="green.png"style="width: 100%; height=100%">
+                </div>
+              </li>
+        </a>
+  
+        <a class="filterDiv bezlimit">      
+            <li>
+              <div class="details">
+                <img src="green.png"style="width: 100%; height=100%">
+              </div>
+            </li>
+          </a>
+          <!-- БЕЗЛИМИТ КОНЕЦ -->
+            <!-- ВЫХОДНЫЕ НАЧАЛО -->
+        <a class="filterDiv weekends">
+          <li>
+            <div class="details">
+              <img src="orange.png"style="width: 100%; height=100%">
+            </div>
+          </li>
+    </a>
+
+    <a class="filterDiv weekends">      
+        <li>
+          <div class="details">
+            <img src="orange.png"style="width: 100%; height=100%">
+          </div>
+        </li>
+      </a>
+      <!-- ВЫХОДНЫЕ КОНЕЦ -->
+      </div>
+    </div>
+  </section>
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  //активный класс к текущей кнопке (выделить)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+</body>
+</html>
