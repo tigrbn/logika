@@ -1,18 +1,21 @@
 
 .about {
     margin-top: 10%;
+    margin-left: 30%;
     width: 15%;   
     float: left;
     border-right: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 .about a{
    color: rgb(87, 86, 86);
+   margin-top: 10px;
 }
 
 .about a img{
-   width: 20px;
-   height: 20px;
+   width: 40px;
+   height: 35px;
    position: relative;
    margin-right: 15px;
    filter: grayscale(1);
@@ -27,8 +30,7 @@
  }
 
 .tab-content{
-    float: left; 
-    width: 70%;
+    float: left; width: 40%;
     color: white;
     margin-top: 10%;
     margin-left: 10%;
@@ -42,7 +44,7 @@
 .nav>a.active img{
     filter: none;
   }
-/* 
+
   @media screen and (max-width: 400px){
   .about {
       width: 30%;
@@ -57,14 +59,21 @@
     filter: grayscale(1);
   }
   
-} */
+}
 
-
-  
-  /* @media screen and (max-width:400px) {
+@media screen and (max-width: 700px){
     .about {
-        width: 10%;
-        font-size: 12px;
+        width: 30%;
+        font-size: 13px;
         margin-left: 5%;
     }
-  } */
+    .about a img{
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin-right: 5px;
+      filter: grayscale(1);
+    }
+    
+  }
+ 

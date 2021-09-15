@@ -1,0 +1,70 @@
+<style>
+@font-face {
+	font-family: 'Geometria-Heavy';
+	src: url('fonts/geometria-heavy.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/geometria-heavy.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/geometria-heavy.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/geometria-heavy.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/geometria-heavy.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/geometria-heavy.svg#geometria-heavy') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+.flip-container_main_card {
+perspective: 1000;
+transform-style: preserve-3d;
+}
+ 
+.flip-container_main_card:hover .back_main_card {
+transform: rotateY(0deg);
+}
+.flip-container_main_card:hover .front_main_card {
+transform: rotateY(180deg);
+}
+ 
+.flip-container_main_card, .front_main_card, .back_main_card {
+width: 60%;
+}
+.flipper_main_card {
+transition: 0.6s;
+transform-style: preserve-3d;
+/* width: 100%; */
+/* position: relative; */
+}
+.front_main_card, .back_main_card {
+backface-visibility: hidden;
+transition: 0.6s;
+transform-style: preserve-3d;
+ 
+position: relative;
+top: 0;
+left: 0;
+}
+.front_main_card {
+z-index: 2;
+transform: rotateY(0deg);
+}
+.back_main_card {
+transform: rotateY(-180deg);
+}
+
+
+</style>
+
+<body style="background: black;">
+
+    <div style="width:100%;border:0; max-width:75%;display:block;margin:0 auto; height: inherit" >
+        <div class="flip-container_main_card" ontouchstart="this.classList.toggle('hover');" style="margin-left: 10%;">
+            <div class="flipper_main_card" >
+                <img class="front_main_card"src="pics/1 (2).png" alt="">
+                <img class="back_main_card" src="pics/БАЗОВ.png" alt="">
+            </div>
+            </div>
+    
+            <div class="flip-container_main_card" ontouchstart="this.classList.toggle('hover');" style="margin-left: 50%;" >
+                <div class="flipper_main_card" >
+                    <img class="front_main_card"src="pics/2 (2).png" alt="">
+                    <img class="back_main_card" src="pics/коммер.png" alt="">
+                </div>
+                </div>
+    </div>
+</body>

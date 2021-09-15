@@ -16,12 +16,17 @@ body {
 }
 
 .filter {
-  margin-top: 50px;
+  margin-top: 0px;
+  width: 60%;
+  margin-left: 30%;;
 }
+
 .flex-column{
   float: left;
   width: 10%;
   margin-top: 5%;
+  position: absolute;
+  margin-left: 10%;
 }
 .filterDiv {
 float: left;
@@ -29,231 +34,684 @@ color: #ffffff;
 width: 270px;
 line-height: 300px;
 text-align: center;
-/* margin: 2px; */
 display: none;
 }
-
 
 .show {
 display: block;
 }
 
-
-/* Стиль кнопок */
 .btn {
 border: none;
 outline: none;
-/* padding: 12px 16px; */
 cursor: pointer;
 }
 
-.filter { 
-float: left;
-width: 70%;
-position: relative;
-margin-left: 100px;
-}
-.li{
-  /* transform-origin: top left; */
-  transform: skewY(0.398705355deg) rotate(7.03624deg);
-  /* padding-top: 150%; */
-  z-index: 1;
-  transition-property: z-index;
-  transition-duration: .3s;
-}
-
-li {
-  float:left;
-  list-style-type: none;
-  
-}
-.slick-center {
-    background-color: rgba(51, 255, 0, 0.356);
-  }
-/* li:nth-child(4n+1) {
-  clear:both;
-} */
-.container {
-  width: 100%;
-}
 .details{
-  /* margin-top: 45%; */
   width: 100%;
   margin-left: 50px;
   position: relative;
   float: left;
-  z-index: 0;
   top: 0;
   transform: rotate(-15deg) translate(0, 0);
   transition-property: transform;
   transition-duration: .7s;
 }
-.poster{
-  position:relative;
-}
-.descr{
-  display:none;
-  background:#000000de;
-  z-index:3;
+ a .nav-link {
+  font-family: "Oswald", sans-serif;
+ }
+.card_btn {
+  outline: none;
+  padding: 10px 16px;
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 18px;
   color: white;
-  width:100%;
-
-  -moz-box-shadow:0 5px 5px rgba(0,0,0,0.3);
-  -webkit-box-shadow:0 5px 5px rgba(0,0,0,0.3);
-  box-shadow:0 5px 5px rgba(0,0,0,0.3);
+  border-bottom: 1px solid #2a2a2a;
+  width: 150px;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
 }
-.details:hover .descr{
-  display:block;
-  position:absolute;
-  /* top:240px; */
-  z-index:1;
-  font-size: 16px;
-  /* margin-top: 50px; */
-  /* width:400px; */
+
+.active, .card_btn:hover {
+  background-color: #75bf42;
+  color: white;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.perevorot:hover .details{ 
+  transform: rotate(0deg) translate(0%, 15%) scale(1.3);
+  width: 180%;
+  z-index: 1;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.767)
+}
+
+ .perevorot:hover{ 
+  background-color: rgba(0, 0, 0, 0.767)
+}
+
+.perevorot:hover {
+  background-color: none;
+}
+.card_text{
+  position: relative;
+  height: 10px;
+
+}
+.card_text h1 {
+  height: 10px;
+  position: absolute;
+}
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+	/*  UPDATED! flip the pane when hovered */
+	.flip-container:hover .back {
+		transform: rotateY(0deg);
+	}
+	.flip-container:hover .front {
+	    transform: rotateY(180deg);
+	}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  height: 300px;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: absolute;
+}
+
+/*  UPDATED! front pane, placed above back */
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(-180deg);
   
 }
-.text_descr{
-  margin-top: 50%;
+
+/* 
+	Some vertical flip updates 
+*/
+.vertical.flip-container {
+	position: relative;
 }
-.details h3 {
+
+	.vertical .back {
+		transform: rotateX(180deg);
+	}
+
+	.vertical.flip-container:hover .back {
+	    transform: rotateX(0deg);
+	}
+
+	.vertical.flip-container:hover .front {
+	    transform: rotateX(180deg);
+	}
+
+
+/* .details:hover{
+  height: 100%;
+  width: 100%;
+} */
+
+.club_price {
   font-size: 15px;
+  height: 30px;
+  width: 90px;
+  margin-top: 260px;
+  margin-left: 110px;
+  position: absolute;
+  border: 1px solid white; 
+  padding: 5px;
+  color: white;
+}
+
+.club_day {
+  color: white;
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+  margin-top: 260px;
+  margin-left: 200px;
+  position: absolute;
 }
 
 
-/* 
-p{
- font-size:1.4em;
-  padding: 2% 2.5% 2% 2.5%;
-}
-p:nth-child(2n){
-  top: 3%;
-  left: 5%;
-}
-p:nth-child(2n+1){
-
-  bottom: 3%;
-  right: 5%;
-} */
-/* h2{
-  text-align: center;
-  width: 82%;
-  left: 15%;
-  top: 80%;
-  transform: rotatez(-25deg);
-  line-height: 140%;
-  transition-property: top;
-  transition-duration: .3s;
+.club_day img {
+  height: 30px;
+  width: 30px;
 }
 
+/* xs (<=543px) */
+@media screen and (min-width: 575px) { 
+  
+.filter {
+  margin-top: 0px;
+  width: 80%;
+  margin-left: 300px;
+}
 
- */
+.flex-column{
+  float: left;
+  width: 10%;
+  margin-top: 5%;
+  position: fixed;
+  margin-left: 10%;
+}
+.filterDiv {
+float: left;
+color: #ffffff;
+width: 270px;
+line-height: 300px;
+text-align: center;
+display: none;
+}
 
-/* li:hover{ 
-  z-index: 4;
-  list-style-type: none;
-} */
-/* li:hover h2{ 
-  top: 64%;
-} */
-li:hover .details{ 
-  transform: rotate(0deg) translate(5.5%, 15%) scale(1.3);
+.show {
+display: block;
+}
+
+.btn {
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+.details{
+  width: 100%;
+  margin-left: 50px;
+  position: relative;
+  float: left;
+  top: 0;
+  transform: rotate(-15deg) translate(0, 0);
+  transition-property: transform;
+  transition-duration: .7s;
+}
+
+.card_btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  border-bottom: 1px solid #2a2a2a;
+  width: 150px;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+}
+
+.active, .card_btn:hover {
+  background-color: #75bf42;
+  color: white;
+  border: 1px solid #75bf42; 
+}
+
+.card_text{
+  position: relative;
+  height: 10px;
+
+}
+.card_text h1 {
+  height: 10px;
+  position: absolute;
+}
+
+.club_price {
+  font-size: 15px;
+  height: 30px;
+  width: 90px;
+  margin-top: 260px;
+  margin-left: 110px;
+  position: absolute;
+  border: 1px solid white; 
+  padding: 5px;
+  color: white;
+}
+
+.club_day {
+  color: white;
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+  margin-top: 260px;
+  margin-left: 200px;
+  position: absolute;
+}
+
+.club_day img {
+  height: 30px;
+  width: 30px;
+}
+
+ }
+
+/* sm (>=576 и <=767) */
+@media (min-width: 576px) and (max-width: 767px) { 
+  .filter {
+    margin-top: 0px;
+    width: 50%;
+    margin-left: 200px;
+  }
+  
+  .flex-column{
+    float: left;
+    width: 10%;
+    margin-top: 5%;
+    position: absolute;
+    margin-left: 10%;
+  }
+  .filterDiv {
+  float: left;
   color: #ffffff;
-  z-index: 4;
-}
-
-.cars:hover{ 
-  z-index: 10;
-}
-
-/* 
-@media (min-width:300px) { 
-  body{
-    font-size: 2.75vw;
+  width: 270px;
+  line-height: 300px;
+  text-align: center;
+  display: none;
   }
-  ul {
-    grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 3vw;
-    margin: 0 3.9vw 0 15vw;
+  
+  .show {
+  display: block;
   }
-
-}
-
-@media (min-width:600px) { 
-  body{
-    font-size: 1.95vw;
+  
+  .btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
   }
-  ul {
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 2vw;
-    margin: 0 2.8vw 0 10vw;
+  
+  .details{
+    width: 100%;
+    margin-left: 50px;
+    position: relative;
+    float: left;
+
+    top: 0;
+    transform: rotate(-15deg) translate(0, 0);
+    transition-property: transform;
+    transition-duration: .7s;
   }
-
-}
-
-@media (min-width:900px) { 
-  body{
-    font-size: 1.5vw;
-  }
-  ul {
-    grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 1.5vw;
-    margin: 0 2.2vw 0 8vw;
-  }
-
-}
-
-@media (min-width:1200px) { 
-  body{
-    font-size: 1.25vw;
-  }
-  ul {
-    grid-template-columns: repeat(5,1fr);
-    grid-column-gap: 1vw;
-    margin: 0 1.8vw 0 6.5vw;
-  }
-
-}
-
-@media (min-width:1500px) { 
-  body{
-    font-size: 1vw;
-  }
-  ul {
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 1vw;
-    margin: 0 1.5vw 0 5.5vw;
-}
-}
-
-
- */
-
-.slick-prev, 
-.slick-next {
-    -webkit-transform: translate(-50%, 0) rotate(deg);
-    -ms-transform: translate(-50%, 0) rotate(90deg);
-    transform: translate(-50%, 0) rotate(90deg);
-    left: 50%;
-}
-    
-.slick-prev {
-    top: -100px;
-}
-
-.slick-next {
-    top: auto;
-    bottom: -200px;
-}
-
-
-.slick-vertical .slick-arrow {
-    width: 60px;
-    display: block;
-    margin: 0 auto;
+  
+  .card_btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #000000;
     cursor: pointer;
-}
-    
-.slick-vertical .slick-arrow:hover { 
-    opacity: .6; 
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid #2a2a2a;
+    width: 150px;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+  }
+  
+
+  .card_text{
+    position: relative;
+    height: 10px;
+  
+  }
+  .card_text h1 {
+    height: 10px;
+    position: absolute;
+  }
+
+  .details:hover{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .club_price {
+    font-size: 15px;
+    height: 30px;
+    width: 90px;
+    margin-top: 260px;
+    margin-left: 110px;
+    position: absolute;
+    border: 1px solid white; 
+    padding: 5px;
+    color: white;
+  }
+  
+  .club_day {
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+    margin-top: 260px;
+    margin-left: 200px;
+    position: absolute;
+  }
+  
+  
+  .club_day img {
+    height: 30px;
+    width: 30px;
+  }
+  }
+
+/* md (>=768 и <=991) */
+/* @media (min-width: 768px) and (max-width: 991px) { ... }  */
+
+/* lg (>=992 и <=1199) */
+@media (min-width: 992px) and (max-width: 1199px) {   
+  .filter {
+  margin-top: 0px;
+  width: 70%;
+  margin-left: 20%;
 }
 
+.flex-column{
+  float: left;
+  width: 10%;
+  margin-top: 5%;
+  position: absolute;
+  margin-left: 5%;
+}
+.filterDiv {
+float: left;
+color: #ffffff;
+width: 270px;
+line-height: 300px;
+text-align: center;
+display: none;
+}
+
+.show {
+display: block;
+}
+
+.btn {
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+
+.card_btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  border-bottom: 1px solid #2a2a2a;
+  width: 150px;
+  text-align: left;
+  font-family: "Oswald", sans-serif;
+}
+
+
+
+.card_text{
+  position: relative;
+  height: 10px;
+
+}
+.card_text h1 {
+  height: 10px;
+  position: absolute;
+}
+
+.details:hover{
+  height: 100%;
+  width: 100%;
+}
+
+.club_price {
+  font-size: 15px;
+  height: 30px;
+  width: 90px;
+  margin-top: 260px;
+  margin-left: 110px;
+  position: absolute;
+  border: 1px solid white; 
+  padding: 5px;
+  color: white;
+}
+
+.club_day {
+  color: white;
+  font-size: 15px;
+  height: 40px;
+  width: 150px;
+  margin-top: 260px;
+  margin-left: 200px;
+  position: absolute;
+}
+
+
+.club_day img {
+  height: 30px;
+  width: 30px;
+} }
+
+@media (min-width: 1200px) { 
+
+  .filter {
+    margin-top: 0px;
+    width: 70%;
+    margin-left: 30%;
+  }
+  
+  .flex-column{
+    float: left;
+    width: 10%;
+    margin-top: 5%;
+    position: absolute;
+    margin-left: 10%;
+  }
+  .filterDiv {
+  float: left;
+  color: #ffffff;
+  width: 270px;
+  line-height: 300px;
+  text-align: center;
+  display: none;
+  }
+  
+  .show {
+  display: block;
+  }
+  
+  .btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  }
+  
+  .details{
+    width: 100%;
+    margin-left: 50px;
+    position: relative;
+    float: left;
+
+    top: 0;
+    transform: rotate(-15deg) translate(0, 0);
+    transition-property: transform;
+    transition-duration: .7s;
+  }
+  
+  .card_btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid #2a2a2a;
+    width: 150px;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .active, .card_btn:hover {
+    background-color: #75bf42;
+    color: white;
+    border: 1px solid #75bf42; 
+  }
+  
+  .card_text{
+    position: relative;
+    height: 10px;
+  
+  }
+  .card_text h1 {
+    height: 10px;
+    position: absolute;
+  }
+  .details:hover{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .club_price {
+    font-size: 15px;
+    height: 30px;
+    width: 90px;
+    margin-top: 260px;
+    margin-left: 110px;
+    position: absolute;
+    border: 1px solid white; 
+    padding: 5px;
+    color: white;
+  }
+  
+  .club_day {
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+    margin-top: 260px;
+    margin-left: 200px;
+    position: absolute;
+  }
+  
+  .club_day img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+
+ @media (min-width: 2000px) { 
+
+  .filter {
+    margin-top: 0px;
+    width: 60%;
+    margin-left: 30%;
+  }
+  
+  .flex-column{
+    float: left;
+    width: 10%;
+    margin-top: 5%;
+    position: absolute;
+    margin-left: 10%;
+  }
+  .filterDiv {
+  float: left;
+  color: #ffffff;
+  width: 270px;
+  line-height: 300px;
+  text-align: center;
+  display: none;
+  }
+  
+  .show {
+  display: block;
+  }
+  
+  .btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  }
+
+  .details{
+    width: 100%;
+    margin-left: 50px;
+    position: relative;
+    float: left;
+
+    top: 0;
+    transform: rotate(-15deg) translate(0, 0);
+    transition-property: transform;
+    transition-duration: .7s;
+  }
+  
+  .card_btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    border-bottom: 1px solid #2a2a2a;
+    width: 150px;
+    text-align: left;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .card_text{
+    position: relative;
+    height: 10px;
+  
+  }
+  .card_text h1 {
+    height: 10px;
+    position: absolute;
+  }
+  .details:hover{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .club_price {
+    font-size: 15px;
+    height: 30px;
+    width: 90px;
+    margin-top: 260px;
+    margin-left: 110px;
+    position: absolute;
+    border: 1px solid white; 
+    padding: 5px;
+    color: white;
+  }
+  
+  .club_day {
+    color: white;
+    font-size: 15px;
+    height: 40px;
+    width: 150px;
+    margin-top: 260px;
+    margin-left: 200px;
+    position: absolute;
+  }
+  
+  
+  .club_day img {
+    height: 30px;
+    width: 30px;
+  }
+} 
